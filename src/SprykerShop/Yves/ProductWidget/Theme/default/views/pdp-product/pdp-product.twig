@@ -12,7 +12,7 @@
             name: data.product.name,
             abstractId: data.product.idProductAbstract,
             url: data.product.url,
-            product: product,
+            product: data.product,
             imageUrl: data.product.images is empty ? '' : data.product.images.0.externalUrlSmall,
             price: data.product.prices.DEFAULT | default(null),
             originalPrice: data.product.prices.ORIGINAL is defined ? data.product.prices.ORIGINAL : null
