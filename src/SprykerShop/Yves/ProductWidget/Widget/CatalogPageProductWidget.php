@@ -27,17 +27,11 @@ class CatalogPageProductWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getCatalogPageSubWidgets());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'CatalogPageProductWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductWidget/views/catalog-product/catalog-product.twig';

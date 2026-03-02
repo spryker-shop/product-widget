@@ -15,9 +15,6 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class ProductAlternativeWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('product', $productViewTransfer);
@@ -26,17 +23,11 @@ class ProductAlternativeWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getProductReplacementForWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'ProductAlternativeWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductWidget/views/pdp-product/pdp-product.twig';

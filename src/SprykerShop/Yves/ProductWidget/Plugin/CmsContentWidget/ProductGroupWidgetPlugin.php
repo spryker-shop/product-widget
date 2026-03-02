@@ -19,11 +19,6 @@ use SprykerShop\Yves\ProductWidget\Widget\CmsProductGroupWidget;
  */
 class ProductGroupWidgetPlugin extends AbstractWidgetPlugin implements ProductGroupWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $widget = new CmsProductGroupWidget($productViewTransfer);
@@ -33,17 +28,11 @@ class ProductGroupWidgetPlugin extends AbstractWidgetPlugin implements ProductGr
         $this->addWidgets($this->getFactory()->getCmsContentWidgetProductGroupWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return CmsProductGroupWidget::getTemplate();

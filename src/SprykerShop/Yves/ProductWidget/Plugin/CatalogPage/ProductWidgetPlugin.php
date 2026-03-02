@@ -33,17 +33,11 @@ class ProductWidgetPlugin extends AbstractWidgetPlugin implements ProductWidgetP
         $this->addWidgets($this->getFactory()->getCatalogPageSubWidgets());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return CatalogPageProductWidget::getTemplate();

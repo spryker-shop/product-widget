@@ -15,9 +15,6 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class PdpProductRelationWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('product', $productViewTransfer);
@@ -26,17 +23,11 @@ class PdpProductRelationWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getProductRelationWidgetSubWidgets());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'PdpProductRelationWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductWidget/views/pdp-product/pdp-product.twig';

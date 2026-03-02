@@ -15,9 +15,6 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class CmsProductWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('product', $productViewTransfer);
@@ -26,17 +23,11 @@ class CmsProductWidget extends AbstractWidget
         $this->addWidgets($this->getFactory()->getCmsContentWidgetProductWidgetPlugins());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'CmsProductWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductWidget/views/cms-product/cms-product.twig';

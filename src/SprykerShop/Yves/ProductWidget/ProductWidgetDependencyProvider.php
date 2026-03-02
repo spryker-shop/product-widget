@@ -135,11 +135,6 @@ class ProductWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addProductReplacementForWidgetPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_REPLACEMENT_FOR_WIDGET_SUB_WIDGET, function () {
@@ -149,11 +144,6 @@ class ProductWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addProductAlternativeWidgetPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_ALTERNATIVE_WIDGET_SUB_WIDGET, function () {

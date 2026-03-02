@@ -19,11 +19,6 @@ use SprykerShop\Yves\ProductWidget\Widget\PdpProductRelationWidget;
  */
 class ProductWidgetPlugin extends AbstractWidgetPlugin implements ProductWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $widget = new PdpProductRelationWidget($productViewTransfer);
@@ -33,17 +28,11 @@ class ProductWidgetPlugin extends AbstractWidgetPlugin implements ProductWidgetP
         $this->addWidgets($this->getFactory()->getProductRelationWidgetSubWidgets());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return PdpProductRelationWidget::getTemplate();
